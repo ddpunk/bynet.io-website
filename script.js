@@ -35,6 +35,7 @@
   var section = stage.closest(".layers");
   var layers = Array.prototype.slice.call(stage.querySelectorAll(".lyr"));
   var panels = Array.prototype.slice.call(section.querySelectorAll(".lpanel"));
+  var steps = Array.prototype.slice.call(section.querySelectorAll(".lsteps li"));
   var desktop = window.matchMedia("(min-width: 981px)");
 
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
@@ -68,6 +69,10 @@
 
     var active = p < 0.34 ? 0 : (p < 0.66 ? 1 : 2);
     panels.forEach(function (pl, i) { pl.classList.toggle("is-dim", i !== active); });
+    steps.forEach(function (st, i) {
+      st.classList.toggle("is-active", i === active);
+      st.classList.toggle("is-done", i < active);
+    });
   }
 
   function onScroll() {

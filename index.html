@@ -49,6 +49,11 @@
         <!-- sticky visual stage: layers stack up as you scroll -->
         <div class="layers__aside">
           <div class="layers__stage" id="stage">
+            <ol class="lsteps" id="lsteps" aria-hidden="true">
+              <li data-i="0"><b>01</b><span>On-chain Order Book</span></li>
+              <li data-i="1"><b>02</b><span>Matchmaking Engine</span></li>
+              <li data-i="2"><b>03</b><span>Problem solving</span></li>
+            </ol>
             <div class="lyr lyr--grid" data-layer="0" aria-hidden="true"><img src="assets/layer-grid.png" alt="" /></div>
             <div class="lyr lyr--slab" data-layer="1" aria-hidden="true"><img src="assets/layer-slab.png" alt="" /></div>
             <div class="lyr lyr--bars" data-layer="2" aria-hidden="true"><img src="assets/layer-bars.png" alt="" /></div>
@@ -156,7 +161,7 @@
             <svg class="ico" viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <div class="cta__art" data-art="cta" aria-hidden="true"></div>
+        <div class="cta__art" aria-hidden="true"><img src="assets/cta-stack.png" alt="" /></div>
       </div>
     </section>
   </main>
@@ -192,7 +197,6 @@
     <svg viewBox="0 0 20 20" fill="none"><path d="M10 16V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
-  <script src="iso.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
