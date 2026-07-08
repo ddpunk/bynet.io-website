@@ -14,8 +14,8 @@
   --ink-soft:    #8a93a3;
   --line:        #e7ecf5;
   --card:        #ffffff;
-  --bg:          #ffffff;
-  --bg-tint:     #f4f7ff;
+  --bg:          #f2f8ff;   /* Figma page background */
+  --bg-tint:     #eaf1ff;
 
   --maxw: 1180px;
   --radius: 14px;
@@ -208,8 +208,8 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   padding: 96px 0 132px;
   background:
-    radial-gradient(120% 90% at 50% -10%, #eef3ff 0%, rgba(238,243,255,0) 55%),
-    linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+    radial-gradient(130% 80% at 50% 0%, #ffffff 0%, rgba(255,255,255,0) 60%),
+    var(--bg);
   overflow: hidden;
 }
 .hero__art {
@@ -365,7 +365,7 @@ a { color: inherit; text-decoration: none; }
 .cta__art { min-width: 0; }
 
 /* ------------------------------ FOOTER ----------------------------- */
-.footer { background: #fff; padding: 40px 0; }
+.footer { background: var(--bg); padding: 40px 0; }
 .footer__inner {
   display: flex;
   align-items: center;
