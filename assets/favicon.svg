@@ -1,5 +1,9 @@
-<svg viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M14 0 27 8l-13 8L1 8 14 0Z" fill="#7BA6FF"/>
-  <path d="M14 16 27 8v18l-13 8V16Z" fill="#2F6BFF"/>
-  <path d="M14 16 1 8v18l13 8V16Z" fill="#1E4FD6"/>
+<svg width="31" height="90" viewBox="0 0 31 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.4132 0L0 15.3022L0.093983 63.2808L13.1576 76.4088V87.0812H13.2516L15.4132 89.2534L17.5748 87.0812H17.6688V76.5033L30.8265 63.2808V15.3022L15.4132 0Z" fill="url(#fav)"/>
+<defs>
+<linearGradient id="fav" x1="13.7384" y1="72.7066" x2="16.9597" y2="9.05707" gradientUnits="userSpaceOnUse">
+<stop stop-color="#089CFC"/>
+<stop offset="0.99" stop-color="#2B2DFD"/>
+</linearGradient>
+</defs>
 </svg>
