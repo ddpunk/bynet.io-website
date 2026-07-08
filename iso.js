@@ -125,6 +125,34 @@
       inner += longBar(224, 166, 140, P.navy);
       inner += longBar(198, 182, 140, P.darkBlue);
       return wrap("0 0 520 470", inner);
+    },
+
+    /* ---- standalone stacking layers (scroll-assembled visual) ---- */
+
+    // layer 1 — solid blue cube grid (centred in the 460x300 box)
+    "l-grid": function () {
+      return wrap("0 0 460 300", grid(5, 5, 30, P.blue, 230, 70, { gap: 2 }));
+    },
+
+    // layer 2 — translucent slab with glowing matchmaking loops
+    "l-slab": function () {
+      var trans = {
+        top: "rgba(206,226,255,0.60)",
+        left: "rgba(176,206,252,0.55)",
+        right: "rgba(156,190,247,0.55)"
+      };
+      var inner = glowDefs("gl", "#4f8bff");
+      inner += cube(230, 90, 110, trans, { h: 16 });
+      inner += arches(230, 150, "gl");
+      return wrap("0 0 460 300", inner);
+    },
+
+    // layer 3 — three raised bars (navy / steel / blue)
+    "l-bars": function () {
+      var inner = longBar(250, 74, 150, P.black);
+      inner += longBar(224, 90, 150, P.navy);
+      inner += longBar(198, 106, 150, P.darkBlue);
+      return wrap("0 0 460 300", inner);
     }
   };
 

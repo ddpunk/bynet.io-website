@@ -68,98 +68,101 @@
       </div>
     </section>
 
-    <!-- ================= ORDER BOOK ================= -->
-    <section class="section" id="order-book">
-      <div class="container layer">
-        <div class="layer__text">
-          <p class="eyebrow">Meet Protocol Layers</p>
-          <h2 class="section__title">On-chain Order Book</h2>
-          <p class="lead">
-            Byron Network offers a fundamental on-chain order book called Bynet Protocol
-            utilizing an infrastructure layer that enables development on top of the protocol.
-            DApps can use shared liquidity from Bynet Protocol&rsquo;s order book by developing
-            their products with the infrastructure. Having mass adoption in mind, Byron Network
-            aims to provide a development layer that is ready to be implemented by projects like BynetDEX.
-          </p>
-        </div>
-        <div class="layer__art" data-art="orderbook" aria-hidden="true"></div>
-      </div>
+    <!-- ============ PROTOCOL LAYERS (scroll-assembled) ============ -->
+    <section class="layers" id="order-book">
+      <div class="container layers__inner">
 
-      <div class="container features">
-        <div class="feature">
-          <span class="feature__check" aria-hidden="true">
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5 8.5 14 15 7" stroke="#2F6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <p>Liquidity Orders increase in size with a fee specified by Liquidity Provider</p>
-        </div>
-        <div class="feature">
-          <span class="feature__check" aria-hidden="true">
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5 8.5 14 15 7" stroke="#2F6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <p>Partially Fulfillable Orders as a way of facing variable order parameters</p>
-        </div>
-        <div class="feature">
-          <span class="feature__check" aria-hidden="true">
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5 8.5 14 15 7" stroke="#2F6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <p>Adjustable Liquidity Orders distribution depending on the price dynamics</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= MATCHMAKING ================= -->
-    <section class="section">
-      <div class="container layer">
-        <div class="layer__text">
-          <p class="eyebrow">Meet Protocol Layers</p>
-          <h2 class="section__title">Matchmaking Engine</h2>
-          <p class="lead">
-            Matchmaking is a service that executes transactions by matching appropriate orders
-            from the order book. Matchmaker is an algorithmic program that performs swaps while
-            getting the difference between the bid and ask prices. It can decide on the commission
-            they are aiming for, with diverse strategies dependent on a specific market.
-          </p>
-          <p class="lead lead--accent">
-            Stake Pool Operators are a crucial part of the Cardano network, and they will be
-            incentivized to perform swaps as matchmakers with various options of rewarding their delegators.
-          </p>
-        </div>
-        <div class="layer__art" data-art="matchmaking" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <!-- ================= PROBLEM SOLVING ================= -->
-    <section class="section">
-      <div class="container layer layer--sticky">
-        <div class="layer__text">
-          <p class="eyebrow">Meet Protocol Layers</p>
-          <h2 class="section__title">Problem solving<br />with Bynet Protocol</h2>
-
-          <div class="points">
-            <div class="point">
-              <span class="point__dot point__dot--navy" aria-hidden="true"></span>
-              <h3>Shared liquidity is the answer to new-born markets struggling with initial liquidity.</h3>
-              <p>Different projects can use liquidity on the Bynet Protocol&rsquo;s On-chain Order Book
-                and therefore increase the number of UTxOs a project has access to. They are not limited
-                by their own market and take advantage of other contributors to the order book.</p>
-            </div>
-            <div class="point">
-              <span class="point__dot" aria-hidden="true"></span>
-              <h3>Easy way of deploying a DeFi project with a strong focus on the business model.</h3>
-              <p>Ever-changing trends in the blockchain space dictate a fast pace of project development.
-                Our team has prepared advanced technology to lift the burden of technological research and
-                to encourage teams to focus on innovative ways to utilize the trading potential.</p>
-            </div>
-            <div class="point">
-              <span class="point__dot" aria-hidden="true"></span>
-              <h3>Greater returns on investments thanks to Liquidity Order&rsquo;s model</h3>
-              <p>With a model that gives the possibility to impose a fee on Liquidity Provider&rsquo;s orders
-                and more projects utilizing its liquidity, higher returns can be expected. With more attractive
-                orders, more swaps will be performed, increasing the initial investment size.</p>
-            </div>
+        <!-- sticky visual stage: layers stack up as you scroll -->
+        <div class="layers__aside">
+          <div class="layers__stage" id="stage">
+            <div class="lyr lyr--grid" data-art="l-grid" data-layer="0" aria-hidden="true"></div>
+            <div class="lyr lyr--slab" data-art="l-slab" data-layer="1" aria-hidden="true"></div>
+            <div class="lyr lyr--bars" data-art="l-bars" data-layer="2" aria-hidden="true"></div>
           </div>
         </div>
-        <div class="layer__art layer__art--top" data-art="problem" aria-hidden="true"></div>
+
+        <!-- scrolling text column -->
+        <div class="layers__content">
+
+          <!-- Layer 1 -->
+          <article class="lpanel" data-panel="0">
+            <p class="eyebrow">Meet Protocol Layers</p>
+            <h2 class="section__title">On-chain Order Book</h2>
+            <p class="lead">
+              Byron Network offers a fundamental on-chain order book called Bynet Protocol
+              utilizing an infrastructure layer that enables development on top of the protocol.
+              DApps can use shared liquidity from Bynet Protocol&rsquo;s order book by developing
+              their products with the infrastructure. Having mass adoption in mind, Byron Network
+              aims to provide a development layer that is ready to be implemented by projects like BynetDEX.
+            </p>
+            <div class="features">
+              <div class="feature">
+                <span class="feature__check" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5 8.5 14 15 7" stroke="#2F6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <p>Liquidity Orders increase in size with a fee specified by Liquidity Provider</p>
+              </div>
+              <div class="feature">
+                <span class="feature__check" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5 8.5 14 15 7" stroke="#2F6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <p>Partially Fulfillable Orders as a way of facing variable order parameters</p>
+              </div>
+              <div class="feature">
+                <span class="feature__check" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5 8.5 14 15 7" stroke="#2F6BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <p>Adjustable Liquidity Orders distribution depending on the price dynamics</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Layer 2 -->
+          <article class="lpanel" data-panel="1">
+            <p class="eyebrow">Meet Protocol Layers</p>
+            <h2 class="section__title">Matchmaking Engine</h2>
+            <p class="lead">
+              Matchmaking is a service that executes transactions by matching appropriate orders
+              from the order book. Matchmaker is an algorithmic program that performs swaps while
+              getting the difference between the bid and ask prices. It can decide on the commission
+              they are aiming for, with diverse strategies dependent on a specific market.
+            </p>
+            <p class="lead lead--accent">
+              Stake Pool Operators are a crucial part of the Cardano network, and they will be
+              incentivized to perform swaps as matchmakers with various options of rewarding their delegators.
+            </p>
+          </article>
+
+          <!-- Layer 3 -->
+          <article class="lpanel" data-panel="2">
+            <p class="eyebrow">Meet Protocol Layers</p>
+            <h2 class="section__title">Problem solving<br />with Bynet Protocol</h2>
+            <div class="points">
+              <div class="point">
+                <span class="point__dot point__dot--navy" aria-hidden="true"></span>
+                <h3>Shared liquidity is the answer to new-born markets struggling with initial liquidity.</h3>
+                <p>Different projects can use liquidity on the Bynet Protocol&rsquo;s On-chain Order Book
+                  and therefore increase the number of UTxOs a project has access to. They are not limited
+                  by their own market and take advantage of other contributors to the order book.</p>
+              </div>
+              <div class="point">
+                <span class="point__dot" aria-hidden="true"></span>
+                <h3>Easy way of deploying a DeFi project with a strong focus on the business model.</h3>
+                <p>Ever-changing trends in the blockchain space dictate a fast pace of project development.
+                  Our team has prepared advanced technology to lift the burden of technological research and
+                  to encourage teams to focus on innovative ways to utilize the trading potential.</p>
+              </div>
+              <div class="point">
+                <span class="point__dot" aria-hidden="true"></span>
+                <h3>Greater returns on investments thanks to Liquidity Order&rsquo;s model</h3>
+                <p>With a model that gives the possibility to impose a fee on Liquidity Provider&rsquo;s orders
+                  and more projects utilizing its liquidity, higher returns can be expected. With more attractive
+                  orders, more swaps will be performed, increasing the initial investment size.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
