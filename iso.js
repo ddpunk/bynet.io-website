@@ -91,13 +91,6 @@
 
   /* -------------------- illustration builders -------------------- */
   var ART = {
-    // faint wireframe stack behind the hero title
-    hero: function () {
-      var inner = grid(3, 3, 60, P.blue, 300, 60, { wire: true, stroke: "#b9cdf5", opacity: .5, gap: 10 });
-      inner += grid(2, 2, 60, P.blue, 300, 150, { wire: true, stroke: "#c7d7f8", opacity: .35, gap: 10 });
-      return wrap("0 0 620 380", inner);
-    },
-
     // solid 5x5 blue cube grid
     orderbook: function () {
       var inner = grid(5, 5, 34, P.blue, 250, 40, { gap: 2 });

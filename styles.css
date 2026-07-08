@@ -222,12 +222,13 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__art {
   position: absolute;
-  top: 40px; left: 50%;
-  width: 620px; max-width: 92%;
+  top: 96px; left: 50%;
+  width: 540px; max-width: 88%;
   transform: translateX(-50%);
   opacity: .9;
   pointer-events: none;
 }
+.hero__art img { width: 100%; height: auto; display: block; }
 .hero__inner { position: relative; text-align: center; }
 .hero__title {
   font-family: var(--font-head);
