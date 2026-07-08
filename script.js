@@ -96,7 +96,7 @@
     ".card", ".step", ".rm", ".eco__item", ".faq__item",
     ".feature", ".point",
     ".cta__text", ".cta__art",
-    ".community__inner", ".footer__grid"
+    ".footer__grid"
   ];
   var els = [];
   groups.forEach(function (sel) {
