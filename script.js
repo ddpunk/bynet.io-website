@@ -91,10 +91,12 @@
   "use strict";
   if (!("IntersectionObserver" in window)) return;
   var groups = [
-    ".hero__title", ".hero__actions",
+    ".hero__title", ".hero__sub", ".hero__actions", ".trust",
+    ".section-head",
+    ".card", ".step", ".rm", ".eco__item", ".faq__item",
     ".feature", ".point",
     ".cta__text", ".cta__art",
-    ".footer__inner"
+    ".community__inner", ".footer__grid"
   ];
   var els = [];
   groups.forEach(function (sel) {
