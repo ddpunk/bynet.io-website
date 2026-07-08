@@ -37,8 +37,8 @@
   var panels = Array.prototype.slice.call(section.querySelectorAll(".lpanel"));
 
   // resting gaps so the three layers stay separated (not merged like a sandwich)
-  var SLAB_REST = -40;   // slab floats above the grid
-  var BARS_REST = -80;   // bars float above the slab
+  var SLAB_REST = -32;   // slab floats above the grid
+  var BARS_REST = -64;   // bars float above the slab
   var desktop = window.matchMedia("(min-width: 981px)");
 
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
