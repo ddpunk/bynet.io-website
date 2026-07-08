@@ -63,8 +63,8 @@
     var bars = seg(p, 0.52, 0.78);   // problem-solving layer drops in
 
     setLayer(layers[0], 1, 0);
-    setLayer(layers[1], slab, (1 - slab) * -70);
-    setLayer(layers[2], bars, (1 - bars) * -90);
+    setLayer(layers[1], slab, (1 - slab) * -90);
+    setLayer(layers[2], bars, (1 - bars) * -160);
 
     var active = p < 0.34 ? 0 : (p < 0.66 ? 1 : 2);
     panels.forEach(function (pl, i) { pl.classList.toggle("is-dim", i !== active); });
