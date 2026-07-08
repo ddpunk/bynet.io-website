@@ -35,7 +35,10 @@
   var section = stage.closest(".layers");
   var layers = Array.prototype.slice.call(stage.querySelectorAll(".lyr"));
   var panels = Array.prototype.slice.call(section.querySelectorAll(".lpanel"));
-  var steps = Array.prototype.slice.call(section.querySelectorAll(".lsteps li"));
+
+  // resting gaps so the three layers stay separated (not merged like a sandwich)
+  var SLAB_REST = -64;   // slab floats above the grid
+  var BARS_REST = -128;  // bars float above the slab
   var desktop = window.matchMedia("(min-width: 981px)");
 
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
@@ -47,7 +50,10 @@
   }
 
   function reset() {
-    layers.forEach(function (l) { setLayer(l, 1, 0); });
+    // static, separated stack (no scroll animation on tablet/mobile)
+    setLayer(layers[0], 1, 0);
+    setLayer(layers[1], 1, SLAB_REST * 0.55);
+    setLayer(layers[2], 1, BARS_REST * 0.55);
     panels.forEach(function (p) { p.classList.remove("is-dim"); });
   }
 
@@ -64,15 +70,11 @@
     var bars = seg(p, 0.52, 0.78);   // problem-solving layer drops in
 
     setLayer(layers[0], 1, 0);
-    setLayer(layers[1], slab, (1 - slab) * -90);
-    setLayer(layers[2], bars, (1 - bars) * -160);
+    setLayer(layers[1], slab, SLAB_REST + (1 - slab) * -70);
+    setLayer(layers[2], bars, BARS_REST + (1 - bars) * -80);
 
     var active = p < 0.34 ? 0 : (p < 0.66 ? 1 : 2);
     panels.forEach(function (pl, i) { pl.classList.toggle("is-dim", i !== active); });
-    steps.forEach(function (st, i) {
-      st.classList.toggle("is-active", i === active);
-      st.classList.toggle("is-done", i < active);
-    });
   }
 
   function onScroll() {
