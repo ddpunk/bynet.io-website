@@ -78,3 +78,47 @@
   if (desktop.addEventListener) desktop.addEventListener("change", update);
   update();
 })();
+
+/* scroll-reveal: fade/slide elements in as they enter the viewport */
+(function () {
+  "use strict";
+  if (!("IntersectionObserver" in window)) return;
+  var groups = [
+    ".hero__title", ".hero__actions",
+    ".feature", ".point",
+    ".cta__text", ".cta__art",
+    ".footer__inner"
+  ];
+  var els = [];
+  groups.forEach(function (sel) {
+    var list = document.querySelectorAll(sel);
+    list.forEach(function (el, i) {
+      el.classList.add("reveal");
+      // stagger items that repeat (cards, points)
+      if (list.length > 1) el.style.transitionDelay = Math.min(i * 90, 360) + "ms";
+      els.push(el);
+    });
+  });
+  if (!els.length) return;
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+  els.forEach(function (el) { io.observe(el); });
+})();
+
+/* back-to-top button */
+(function () {
+  "use strict";
+  var btn = document.getElementById("toTop");
+  if (!btn) return;
+  function toggle() { btn.classList.toggle("is-shown", window.scrollY > window.innerHeight * 0.9); }
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  toggle();
+  window.addEventListener("scroll", toggle, { passive: true });
+})();
